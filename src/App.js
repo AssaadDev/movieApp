@@ -19,7 +19,7 @@ function App() {
           <Route path="/movies" />
           <Route exat path="/movies/${id}" />
           <Route exat path="/series" />
-          <Route exat path="/series/${id}" />
+          <Route exat path='/series/${id}' />
         </Routes>
       </div>
     </Router>
