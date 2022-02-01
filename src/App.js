@@ -5,7 +5,7 @@ import React,{useState} from "react";
 function App() {
 
     const [srch, setSrch] = useState('');
-    //console.log(value);
+    //////console.log(value);
 
   return (
     <Router>
