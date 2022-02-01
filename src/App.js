@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React,{useState} from "react";
+import {Movie} from './components/movies/movies';
+import { Series } from "./components/series/series";
 
 function App() {
 
@@ -16,9 +18,9 @@ function App() {
           <input type={"text"} placeholder="Search..." value={srch} onChange={e => setSrch(e.target.value)}/>
         </header>
         <Routes>
-          <Route path="/movies" />
+          <Route path="/movies" element={<Movie />}/>
           <Route exat path="/movies/${id}" />
-          <Route exat path="/series" />
+          <Route exat path="/series" element={<Series />}/>
           <Route exat path='/series/${id}' />
         </Routes>
       </div>
