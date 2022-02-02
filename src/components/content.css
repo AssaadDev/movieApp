@@ -1,0 +1,4 @@
+.list-of-content{
+    display: flex;
+    justify-content: space-between;
+}
