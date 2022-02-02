@@ -39,6 +39,7 @@ export const Series = ({ search, _id }) => {
   useEffect(() => {
     if (search.length >= 3) {
       getApiSrch();
+      setErr('No match');
       //console.log("search activated");
     } else {
       getApi();
@@ -48,7 +49,7 @@ export const Series = ({ search, _id }) => {
 
   return (
     <div className="list-of-content" id={_id}>
-      {err ? <p>{err}</p> : null}
+      {series == 0  ? <p>{err}</p> : null}
       {series.map((key) => {
         return (
           <SingleCard id={key.id} image={key.poster_path} title={key.name} />

@@ -44,6 +44,7 @@ export function Movie({ search, _id }) {
     if (search.length >= 3) {
       getApiSrch();
       //console.log("search activated");
+      setErr('No match');
     } else {
       getApi();
       //console.log("default");
@@ -52,7 +53,7 @@ export function Movie({ search, _id }) {
 
   return (
     <div className="list-of-content" id={_id}>
-      {err ? <p>{err}</p> : null}
+      {movies == 0 ? <p className="errMsg">{err}</p> : null}
       {movies.map((key) => {
         return (
           <SingleCard id={key.id} image={key.poster_path} title={key.title} />
