@@ -1,10 +1,32 @@
 .list-of-content{
+    margin: 20px 0 0 0;
+    width: 50%;
     text-align: center;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .errMsg{
     color: red;
     font-size: 30px;
     font-weight: 800;
 }
+
+@media screen and (max-width: 1600px) {
+    .list-of-content{
+        width: 82%;
+        
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .list-of-content{
+        width: 100%;
+        
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .list-of-content{
+        flex-direction: column;
+        align-items: center;
+    }
+  }

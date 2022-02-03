@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React,{useState} from "react";
 import {Movie} from './components/movies/movies';
 import { Series } from "./components/series/series";
+import "./javascriptCss"
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <Link to="/movies">Movies</Link>
-          <Link to="/series">Series</Link>
+          <Link id={"movie"} className='navBtn' to="/movies">Movies</Link>
+          <Link id={"serie"} className='navBtn' to="/series">Series</Link>
           <input type={"text"} placeholder="Search..." value={srch} onChange={e => setSrch(e.target.value)}/>
         </header>
         <Routes>
