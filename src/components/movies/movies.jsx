@@ -50,13 +50,14 @@ export function Movie({ search, _id }) {
       //console.log("default");
     }
   }, [control]);
+  console.log(movies)
 
   return (
     <div className="list-of-content" id={_id}>
       {movies == 0 ? <p className="errMsg">{err}</p> : null}
       {movies.map((key) => {
         return (
-          <SingleCard id={key.id} image={key.poster_path} title={key.title} />
+          <SingleCard id={key.id} image={key.poster_path} title={key.title} type={"Movies"}/>
         );
       })}
     </div>

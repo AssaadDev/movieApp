@@ -1,0 +1,63 @@
+.backgrnd {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+}
+.desc{
+    font-size: 24px;
+}
+.titlecss{
+    font-size: 36px;
+}
+
+.flexSecond, .flexFirst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexSecond{
+    width: 20%;
+}
+.optional{
+    margin-top: 50px;
+    font-size: 30px;
+    padding: 5px 45px;
+    outline: none;
+    border: none;
+    background-color: greenyellow;
+    transition: linear 0.2s;
+}
+.optional:hover{
+
+    background-color: red;
+}
+
+@media screen and (max-width: 2024px) {
+    /* Specific to this particular image */
+    .flexSecond{
+        width: 40%;
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    /* Specific to this particular image */
+    .flexSecond{
+        width: 80%;
+    }
+    .backgrnd {
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
+

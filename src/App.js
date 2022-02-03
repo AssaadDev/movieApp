@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React,{useState} from "react";
 import {Movie} from './components/movies/movies';
 import { Series } from "./components/series/series";
+import { SingleContent } from "./components/singleContent/singleContent";
 import "./javascriptCss"
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
         </header>
         <Routes>
           <Route path="/movies" element={<Movie search={srch} _id={1}/>} />
-          <Route exat path="/movies/${id}" />
+          <Route exat path="/movies/:title" element={<SingleContent type={"movie"} />} />
           <Route exat path="/series" element={<Series search={srch} _id={2}/>}/>
-          <Route exat path='/series/${id}' />
+          <Route exat path='/series/:title' element={<SingleContent type={""} />} />
         </Routes>
       </div>
     </Router>
